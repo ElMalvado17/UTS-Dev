@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Background styling */
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?technology,signup') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Overlay for background dimming */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    /* Registration form card styling */
+    .register-card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .register-card h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-control {
+      background: #f1f1f1;
+      border: none;
+      border-radius: 4px;
+      padding: 15px;
+    }
+
+    .form-control:focus {
+      background: #e0e0e0;
+      box-shadow: none;
+    }
+
+    .btn-register {
+      background: #007bff;
+      color: #fff;
+      font-weight: bold;
+      width: 100%;
+      border-radius: 4px;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-register:hover {
+      background: #0069d9;
+    }
+
+    .terms {
+      font-size: 0.9em;
+    }
+
+    .terms input {
+      margin-right: 5px;
+    }
+
+    .text-center a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .text-center a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-button:hover {
+      background: #007bff;
+      color: white;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+    <button onclick="window.history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+  <div class="overlay"></div>
+  <div class="register-card">
+    <h2 class="text-center">Register</h2>
+    <form action="/register" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+      </div>
+      <div class="form-group terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I accept the <a href="/terms">Terms and Conditions</a></label>
+      </div>
+      <button type="submit" class="btn btn-register">Sign Up</button>
+      <p class="text-center mt-3">Already have an account? <a href="/login">Login here</a>.</p>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <% include partials/script %>
+</body>
+
+</html>

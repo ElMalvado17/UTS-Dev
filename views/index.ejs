@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <% include partials/head %>
+  <title>Game Store - Home</title>
+</head>
+
+<body>
+  <% include partials/menu %>
+
+  <header>
+    <div class="hero-section">
+      <h1>Selamat Datang di Game Store</h1>
+      <p>Temukan dan mainkan game terbaik di sini!</p>
+      <button onclick="location.href='/explore'">Jelajahi Sekarang</button>
+    </div>
+  </header>
+
+  <section class="popular-games">
+    <h2>Game Populer</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="/public/img/minecraft.jpg" alt="Game 1">
+        <h3>Game 1</h3>
+        <p>Deskripsi singkat tentang Game 1 yang menarik dan seru.</p>
+      </div>
+      <div class="game-card">
+        <img src="/public/img/roblox.jpg" alt="Game 2">
+        <h3>Game 2</h3>
+        <p>Deskripsi singkat tentang Game 2 yang menantang dan seru.</p>
+      </div>
+      <div class="game-card">
+        <img src="/public/img/gt.jpg" alt="Game 3">
+        <h3>Game 3</h3>
+        <p>Deskripsi singkat tentang Game 3 dengan grafis yang memukau.</p>
+      </div>
+      <div class="game-card">
+        <img src="/public/img/skrim.png" alt="Game 4">
+        <h3>Game 4</h3>
+        <p>Deskripsi singkat tentang Game 4 yang penuh aksi dan petualangan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="new-releases">
+    <h2>Rilis Terbaru</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="/public/img/minecraft.jpg" alt="New Game 1">
+        <h3>New Game 1</h3>
+        <p>Game baru dengan fitur-fitur terbaru.</p>
+      </div>
+      <div class="game-card">
+        <img src="/public/img/roblox.jpg" alt="New Game 2">
+        <h3>New Game 2</h3>
+        <p>Petualangan baru yang wajib dicoba.</p>
+      </div>
+      <div class="game-card">
+        <img src="/public/img/gt.jpg" alt="New Game 3">
+        <h3>New Game 3</h3>
+        <p>Serunya bertarung di dunia fantasi terbaru.</p>
+      </div>
+      <div class="game-card">
+        <img src="/public/img/skrim.png" alt="New Game 4">
+        <h3>New Game 4</h3>
+        <p>Permainan seru dengan mekanik yang baru.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info">
+    <h3>Hubungi Kami</h3>
+    <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan, hubungi kami melalui:</p>
+    <p>Telepon: 0-800-123-4567 (Senin - Sabtu, Pukul 08.00 - 18.00)</p>
+    <p>Email: support@gamestore.com</p>
+  </section>
+
+  <footer>
+    <p>© 2024 Game Store. All rights reserved.</p>
+  </footer>
+
+  <% include partials/script %>
+
+</body>
+
+</html>
